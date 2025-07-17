@@ -1,6 +1,6 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Program: React.FC = () => {
@@ -170,7 +170,7 @@ const Program: React.FC = () => {
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-800 mb-2">{program.title}</h4>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">{program.description}</p>
+                  <p className="text-sm text-gray-600 mb-3 truncate">{program.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
                       <i className="fas fa-clock mr-1"></i>
@@ -247,40 +247,6 @@ const Program: React.FC = () => {
           </div>
         </div>
       </main>
-
-      {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 w-full bg-white border-t border-gray-200 px-0 py-0 z-50">
-        <div className="grid grid-cols-4 h-20">
-          <Link 
-            to="/"
-            className="flex flex-col items-center justify-center space-y-1 cursor-pointer text-gray-500 no-underline"
-          >
-            <i className="fas fa-home text-2xl"></i>
-            <span className="text-sm font-medium">홈</span>
-          </Link>
-          <button className="flex flex-col items-center justify-center space-y-1 cursor-pointer text-gray-500">
-            <i className="fas fa-chart-line text-2xl"></i>
-            <span className="text-sm font-medium">수면 기록</span>
-          </button>
-          <button className="flex flex-col items-center justify-center space-y-1 cursor-pointer text-blue-600 bg-blue-50">
-            <i className="fas fa-graduation-cap text-2xl"></i>
-            <span className="text-sm font-medium">프로그램</span>
-          </button>
-          <button className="flex flex-col items-center justify-center space-y-1 cursor-pointer text-gray-500">
-            <i className="fas fa-cog text-2xl"></i>
-            <span className="text-sm font-medium">설정</span>
-          </button>
-        </div>
-      </nav>
-
-      <style jsx>{`
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
     </div>
   );
 };

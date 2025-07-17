@@ -3,15 +3,6 @@ import React, { useState } from 'react';
 
 const Home: React.FC = () => {
   const [sleepStarted, setSleepStarted] = useState(false);
-  const weeklyProgress = [
-    { week: 1, title: '수면 생리 교육', progress: 75, completed: true },
-    { week: 2, title: '수면 습관 형성', progress: 45, completed: false },
-    { week: 3, title: '생활 습관 점검', progress: 0, completed: false },
-    { week: 4, title: '이완 반응 훈련', progress: 0, completed: false },
-    { week: 5, title: '사고 전환 훈련', progress: 0, completed: false },
-    { week: 6, title: '재발 방지 전략', progress: 0, completed: false },
-  ];
-
   const todayMissions = [
     { id: 1, title: '수면 일기 작성하기', completed: true },
     { id: 2, title: '취침 2시간 전 카페인 금지', completed: false },
