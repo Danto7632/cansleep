@@ -255,6 +255,15 @@ const SleepRecord: React.FC = () => {
               </div>
             </div>
             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">수면 노트</label>
+              <textarea
+                value={sleepNote}
+                onChange={(e) => setSleepNote(e.target.value)}
+                placeholder="수면에 대한 메모를 입력하세요 (예: 카페인 섭취, 운동 여부 등)"
+                className="w-full p-3 border border-gray-200 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent h-24 resize-none"
+              />
+            </div>
+            <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">수면의 질</label>
               <div className="flex items-center justify-between">
                 {[1, 2, 3, 4, 5].map((rating) => (
