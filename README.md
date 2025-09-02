@@ -1,69 +1,126 @@
-# React + TypeScript + Vite
+# 잠이솔솔 (CanSleep) 🌙
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **디지털 CBT-i 기반 시니어 친화형 수면 개선 앱 MVP**  
+> 고령층을 위한 인지행동치료 기반 수면 장애 해결 솔루션
+>
+> **제2회 대한민국 학생 창업주간 프로그램 [A4]AX START UP 과정** 기획 아이디어
 
-Currently, two official plugins are available:
+**🔗 데모 사이트**: [cansleep.kro.kr](https://cansleep.kro.kr)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![React](https://img.shields.io/badge/React-18.2.0-blue?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.5-blue?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 
-## Expanding the ESLint configuration
+## 📱 프로젝트 소개
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**잠이솔솔**은 국내 124만 명의 수면 장애 환자 중 70% 이상을 차지하는 고령층을 위한 **디지털 치료제(DTx) MVP 모델**입니다. 단순한 멜라토닌 보충의 한계를 넘어, **인지행동치료(CBT-i)** 기반의 구조적이고 장기적인 수면 개선 솔루션을 제공합니다.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎯 핵심 가치
+- **과학적 근거**: CBT-i 기반 메타분석 수준의 효과 (SMD ≈ -0.85)
+- **시니어 친화**: 큰 버튼, 큰 글꼴, 직관적 내비게이션
+- **개인화**: AI 챗봇 기반 맞춤형 수면 코칭
+- **접근성**: 시간·장소 제약 없는 디지털 치료
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🎬 시연 영상
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| 메인 화면 및 수면 기록 | CBT-i 프로그램 관리 | 수면 패턴 분석 및 통계 |
+|:---:|:---:|:---:|
+| <img src="./public/image/cansleep1.gif" width="280" alt="메인 화면"> | <img src="./public/image/cansleep2.gif" width="240" alt="프로그램 화면"> | <img src="./public/image/cansleep3.gif" width="280" alt="수면 기록 화면"> |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✨ 주요 기능
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🏠 홈 화면
+- **원터치 수면 기록**: 직관적인 취침/기상 버튼
+- **일일 미션**: 개인화된 수면 개선 과제
+- **실시간 통계**: 수면 패턴 요약 정보
+- **AI 음성 지원**: 시니어 친화적 음성 인터페이스
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📚 CBT-i 프로그램
+- **체계적 커리큘럼**: 7일/14일/21일 단계별 프로그램
+- **진행률 추적**: 실시간 학습 진도 관리
+- **카테고리별 학습**: 수면 교육, 이완 기법, 환경 최적화
+- **개인 맞춤**: 사용자 수면 패턴 기반 추천
+
+### 📊 수면 기록 & 분석
+- **시각적 캘린더**: 월별 수면 품질 한눈에 보기
+- **상세 통계**: 평균 수면시간, 효율성, 품질 점수
+- **수면 노트**: 일일 수면 상태 기록 및 메모
+- **패턴 분석**: 장기간 수면 트렌드 시각화
+
+## 🛠 기술 스택
+
+### Frontend
+- **React 18.2.0**: 컴포넌트 기반 사용자 인터페이스
+- **TypeScript 5.2.2**: 타입 안전성 보장
+- **React Router DOM 6.20.0**: SPA 라우팅
+- **Tailwind CSS 3.3.5**: 유틸리티 퍼스트 스타일링
+
+### Build & Development
+- **Vite 5.0.0**: 빠른 개발 서버 및 번들링
+- **ESLint**: 코드 품질 관리
+- **PostCSS & Autoprefixer**: CSS 후처리
+
+### Deployment
+- **GitHub Pages**: 정적 사이트 호스팅
+- **Custom Domain**: cansleep.kro.kr
+
+
+
+## 📈 사업적 가치
+
+### 시장 규모
+- **국내 수면 장애 시장**: 연 3,200억 원 (2023년)
+- **디지털 헬스 시장**: 2024년 33억 달러 → 2030년 110억 달러 (CAGR 23%)
+- **타겟 고령층**: 87만 명 (전체 환자의 70%)
+
+### 경쟁 우위
+- **멜라토닌 대비**: 구조적·장기적 개선 vs 단기적 진입 효과
+- **면대면 CBT 대비**: 24/7 접근성, 비용 효율성
+- **기존 앱 대비**: 시니어 특화 UX/UI, 한국형 콘텐츠
+
+### 수익 모델
+- **B2C**: 프리미엄 구독 (월 12,000원)
+- **B2B**: 병원·기관 라이선스 (연 1,000만원~)
+- **Payer**: 건강보험 급여 연동 (회당 35,000원)
+
+## 👥 팀 정보
+
+**팀장 및 개발**: 김인성
+- 프로젝트 총괄 및 팀 리더십
+- React/TypeScript 기반 MVP 개발
+- 시니어 친화적 UI/UX 구현
+
+**사업 기획팀**:
+- **김예림**: 시장조사 및 사업계획서 작성 지원
+- **유창욱**: 사업계획서 작성 및 기술 검토 지원
+- **최연**: 시장조사 및 보안 전략 기획
+
+## 🎯 로드맵
+
+### Phase 1: MVP 완성 (현재)
+- ✅ 기본 UI/UX 구현
+- ✅ 수면 기록 기능
+- ✅ CBT-i 프로그램 구조
+- ✅ 반응형 디자인
+
+### Phase 2: 고도화 (2024 Q2)
+- 🔄 AI 챗봇 통합
+- 🔄 음성 인터페이스 고도화
+- 🔄 개인화 알고리즘 구현
+- 🔄 데이터 분석 기능 강화
+
+### Phase 3: 사업화 (2024 Q3-Q4)
+- 📋 디지털 치료제(DTx) 인증 준비
+- 📋 병원 연동 시스템 구축
+- 📋 보험 급여 등재 추진
+- 📋 B2B 파트너십 확대
+
+
+
+---
+
+<div align="center">
+
+**잠이솔솔과 함께 건강한 수면 습관을 만들어보세요** 🌙✨
+
+</div>
