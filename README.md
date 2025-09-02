@@ -26,7 +26,7 @@
 
 | 메인 화면 및 수면 기록 | CBT-i 프로그램 관리 | 수면 패턴 분석 및 통계 |
 |:---:|:---:|:---:|
-| <img src="./public/image/cansleep1.gif" width="280" alt="메인 화면"> | <img src="./public/image/cansleep2.gif" width="240" alt="프로그램 화면"> | <img src="./public/image/cansleep3.gif" width="280" alt="수면 기록 화면"> |
+| <img src="./public/image/cansleep1.gif" width="220" alt="메인 화면"> | <img src="./public/image/cansleep2.gif" width="200" alt="프로그램 화면"> | <img src="./public/image/cansleep3.gif" width="220" alt="수면 기록 화면"> |
 
 ## ✨ 주요 기능
 
