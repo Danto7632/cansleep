@@ -5,7 +5,7 @@
 >
 > **제2회 대한민국 학생 창업주간 프로그램 [A4]AX START UP 과정** 기획 아이디어
 
-**🔗 데모 사이트**: [cansleep.kro.kr](https://cansleep.kro.kr)(모바일UI로 확인해주세요)
+**🔗 데모 사이트**: [cansleep.kro.kr](http://cansleep.kro.kr)(모바일UI로 확인해주세요)
 
 
 [![React](https://img.shields.io/badge/React-18.2.0-blue?style=flat&logo=react)](https://reactjs.org/)
